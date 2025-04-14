@@ -1,0 +1,181 @@
+/* =============================
+   VARIABLES PRINCIPALES
+============================= */
+:root {
+  --verde-fondo: #7daf18;
+  --verde-texto: #4b8101;
+  --naranja: #de9900;
+  --gris-fondo-footer: #d3d3d3;
+  --gris-th: #f5f5f5;
+  --gris-linea: #b3b3b3; /* 🔹 Nuevo color de líneas */
+  --texto-principal: #000;
+  --texto-secundario: #5f5f5f;
+  --fondo: #ffffff;
+}
+
+/* =============================
+   RESET GENERAL
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================
+   AUMENTO DE ZOOM GLOBAL
+   ↓↓↓ CAMBIO APLICADO AQUÍ ↓↓↓
+============================= */
+html {
+  font-size: 120%; /* 🔹 Línea añadida: zoom general del texto */
+  overflow-x: hidden; /* 🔹 Evita scroll horizontal por el zoom */
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto-principal);
+  font-size: 5rem;/* 🔹 Asegura escalado con html */
+  zoom: 3.4; /* 🔹 Aplica zoom visual real */
+  
+  overflow-x: hidden;
+}
+
+
+/* ↑↑↑ FIN DE CAMBIO DE ZOOM ↑↑↑ */
+
+/* =============================
+   BARRA SUPERIOR
+============================= */
+.top-bar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar-inner {
+  background-color: var(--verde-fondo);
+  border-bottom: 4px solid #2d2d2d;
+  width: 100%;
+  max-width: 555px; /* ✅ ancho máximo del bloque verde */
+  padding: 18px 15px; /* ✅ margen interno estándar */
+  display: flex;
+  justify-content: flex-start; /* ✅ logo a la izquierda */
+  align-items: center;
+}
+
+.top-bar .logo {
+  height: 15px;
+  margin-left: 0;
+}
+
+/* =============================
+   SECCIÓN DE TÍTULO
+============================= */
+.title-section {
+  padding: 15px 20px 10px;
+}
+
+.title-section .highlight {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--naranja);
+}
+
+.title-section h2 {
+  font-size: 20px;
+  color: var(--verde-texto);
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+/* =============================
+   TABLA DE DATOS
+============================= */
+.data-table {
+  width: 100%;
+  padding: 015px ;
+  margin-bottom: 0;
+  margin-bottom: 0 0 20px 0;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  font-size: 13.5px;
+  padding: 6px 8px;
+  border-bottom: 0.5px solid var(--gris-linea);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.data-table th {
+  background-color: var(--gris-th);
+  font-weight: 500;
+  color: var(--texto-principal);
+  width: 42%;
+}
+
+.data-table td {
+  background-color: #fff;
+  color: var(--texto-secundario);
+}
+
+/* =============================
+   PIE DE PÁGINA
+============================= */
+footer {
+  background-color: var(--gris-fondo-footer); /* Gris de fondo */
+  color: #3a3a3a;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start; /* ✅ Esto centra el bloque interno */
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 555px; /* ✅ Igual que el .top-bar-inner */
+  padding: 12px 15px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+
+/* =============================
+   RESPONSIVE (MÓVIL)
+============================= */
+@media (max-width: 600px) {
+  .top-bar .logo {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .title-section {
+    padding: 12px;
+  }
+
+  .title-section .highlight {
+    font-size: 14px;
+  }
+
+  .title-section h2 {
+    font-size: 17px;
+  }
+
+  .data-table th,
+  .data-table td {
+    font-size: 12.5px;
+    padding: 5px 6px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
