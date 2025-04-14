@@ -1,52 +1,35 @@
-/* =============================
-   VARIABLES PRINCIPALES
-============================= */
 :root {
   --verde-fondo: #7daf18;
   --verde-texto: #4b8101;
   --naranja: #de9900;
   --gris-fondo-footer: #d3d3d3;
   --gris-th: #f5f5f5;
-  --gris-linea: #b3b3b3; /* 🔹 Nuevo color de líneas */
+  --gris-linea: #b3b3b3;
   --texto-principal: #000;
   --texto-secundario: #5f5f5f;
   --fondo: #ffffff;
 }
 
-/* =============================
-   RESET GENERAL
-============================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =============================
-   AUMENTO DE ZOOM GLOBAL
-   ↓↓↓ CAMBIO APLICADO AQUÍ ↓↓↓
-============================= */
 html {
-  font-size: 120%; /* 🔹 Línea añadida: zoom general del texto */
-  overflow-x: hidden; /* 🔹 Evita scroll horizontal por el zoom */
+  font-size: 100%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background-color: var(--fondo);
   color: var(--texto-principal);
-  font-size: 5rem;/* 🔹 Asegura escalado con html */
-  zoom: 3.4; /* 🔹 Aplica zoom visual real */
-  
+  font-size: 16px;
   overflow-x: hidden;
 }
 
-
-/* ↑↑↑ FIN DE CAMBIO DE ZOOM ↑↑↑ */
-
-/* =============================
-   BARRA SUPERIOR
-============================= */
+/* HEADER */
 .top-bar {
   background-color: #ffffff;
   display: flex;
@@ -58,23 +41,23 @@ body {
   background-color: var(--verde-fondo);
   border-bottom: 4px solid #2d2d2d;
   width: 100%;
-  max-width: 555px; /* ✅ ancho máximo del bloque verde */
-  padding: 18px 15px; /* ✅ margen interno estándar */
+  max-width: 555px;
+  padding: 18px 15px;
   display: flex;
-  justify-content: flex-start; /* ✅ logo a la izquierda */
+  justify-content: flex-start;
   align-items: center;
 }
 
-.top-bar .logo {
+.logo {
   height: 15px;
   margin-left: 0;
 }
 
-/* =============================
-   SECCIÓN DE TÍTULO
-============================= */
+/* TÍTULOS */
 .title-section {
   padding: 15px 20px 10px;
+  max-width: 555px;
+  margin: 0 auto;
 }
 
 .title-section .highlight {
@@ -90,14 +73,12 @@ body {
   margin-top: 5px;
 }
 
-/* =============================
-   TABLA DE DATOS
-============================= */
+/* TABLA */
 .data-table {
   width: 100%;
-  padding: 015px ;
-  margin-bottom: 0;
-  margin-bottom: 0 0 20px 0;
+  max-width: 555px;
+  padding: 0 15px;
+  margin: 0 auto 20px auto;
 }
 
 .data-table table {
@@ -126,31 +107,25 @@ body {
   color: var(--texto-secundario);
 }
 
-/* =============================
-   PIE DE PÁGINA
-============================= */
+/* FOOTER */
 footer {
-  background-color: var(--gris-fondo-footer); /* Gris de fondo */
-  color: #3a3a3a;
-  font-size: 14px;
+  background-color: var(--gris-fondo-footer);
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: flex-start; /* ✅ Esto centra el bloque interno */
+  justify-content: center;
 }
 
 .footer-inner {
   width: 100%;
-  max-width: 555px; /* ✅ Igual que el .top-bar-inner */
+  max-width: 555px;
   padding: 12px 15px;
-  margin: 0 auto;
+  color: #3a3a3a;
+  font-size: 14px;
   text-align: left;
 }
 
-
-/* =============================
-   RESPONSIVE (MÓVIL)
-============================= */
+/* RESPONSIVE MÓVIL */
 @media (max-width: 600px) {
   .top-bar .logo {
     height: auto;
