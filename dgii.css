@@ -4,7 +4,7 @@
   --naranja: #de9900;
   --gris-fondo-footer: #d3d3d3;
   --gris-th: #f5f5f5;
-  --gris-linea: #b3b3b3;
+  --gris-linea: #eceaea;
   --texto-principal: #000;
   --texto-secundario: #5f5f5f;
   --fondo: #ffffff;
@@ -21,17 +21,18 @@ html {
   overflow-x: hidden;
 }
 
+
+
 body {
-  font-size: 14px;
+  font-size: 20px;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background-color: var(--fondo);
   color: var(--texto-principal);
-  font-size: 16px;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  
+  margin: 5px;           /* ✅ Sin margen exterior */
+  padding: 0;          /* ✅ Sin padding que empuje el footer hacia adentro */
 }
+
 
 /* HEADER */
 .top-bar {
@@ -45,44 +46,51 @@ body {
   background-color: var(--verde-fondo);
   border-bottom: 4px solid #2d2d2d;
   width: 100%;
-  max-width: 450px;
-  padding: 15px 50px;
+  max-width: 620px;      /* Como en DGII */
+  padding: 20px 15px;    /* 🔹 Padding más realista */
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-
 .logo {
   height: 15px;
   margin-left: 0;
 }
 
-/* TÍTULOS */
+/* =====================================
+   SECCIÓN DE TÍTULO: .title-section
+   Ajustada para verse como la DGII móvil
+===================================== */
 .title-section {
-  padding: 15px 20px 10px;
-  max-width: 555px;
-  margin: 0 auto;
+  padding: 15px; /* Espaciado interno */
+  max-width: 680px; /* Limita el ancho para centrado limpio */
+  margin: 0 auto;   /* Centrado horizontal */
 }
 
+/* Texto: "Sistema Datamatrix" */
 .title-section .highlight {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--naranja);
+  font-size: 18px;        /* 🔼 Aumentado desde 16px */
+  font-weight: bold;      
+  color: var(--naranja);  /* Color naranja oficial DGII */
+  margin-bottom: 1px;     /* Espacio debajo */
 }
 
+/* Título: "Validación de Documentos" */
 .title-section h2 {
-  font-size: 20px;
-  color: var(--verde-texto);
-  font-weight: normal;
-  margin-top: 5px;
+  font-size: 30px;         /* 🔼 Aumentado desde 20px */
+  font-weight: 400;        /* Peso de fuente suave como original */
+  color: var(--verde-texto); 
+  margin-top: 2px;
 }
+
 
 /* TABLA */
 .data-table {
   width: 100%;
   max-width: 555px;
-  padding: 0 10px;
-  margin: 20px;
+  padding: 0 8px;
+  margin: 0px;
+  zoom: 2.5;
 }
 
 .data-table table {
@@ -94,14 +102,14 @@ body {
 .data-table td {
   font-size: 13.5px;
   padding: 6px 8px;
-  border-bottom: 0.5px solid var(--gris-linea);
+  border-bottom: 0.3px solid var(--gris-linea); /* 🔹 Línea más fina y clara */
   text-align: left;
   vertical-align: middle;
 }
 
 .data-table th {
   background-color: var(--gris-th);
-  font-weight: 500;
+  font-weight: normal;
   color: var(--texto-principal);
   width: 42%;
 }
@@ -114,27 +122,42 @@ body {
 /* FOOTER */
 footer {
   background-color: var(--gris-fondo-footer);
-  padding: 10PX;
-  margin: 10PX;
+  width: 100%;
+  padding: 35px;
+  margin: 20px 0;
   display: flex;
   justify-content: flex-start;
+  color: #3d3c3c !important;
+  
 }
 
+/* 🔽 Contenido del footer centrado y con padding vertical */
 .footer-inner {
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 12px 15px;
-  color: #3a3a3a;
-  font-size: 14px;
+  width: 100%;                 /* 🔹 Ocupa todo el espacio disponible */
+  max-width: 555px;             /* 🔹 Evita límites como 555px que recortan el ancho */
+  padding: 20px 8px;             /* 🔹 Espacio vertical dentro del footer */
   text-align: left;
+  font-size: 16px;
+  color: #3d3c3c !important; /* 🔹 Forzamos el gris oscuro real */
+  display: block;            /* 🔹 Centrado vertical */
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0px;
+  margin: 0 auto;
 }
+
 
 /* RESPONSIVE MÓVIL */
 @media (max-width: 600px) {
+  .top-bar-inner {
+    max-width: 100%; /* o puedes dejarlo en 100% */
+    padding: 18px 16px;      /* 🔹 Alineado a la izquierda con margen pequeño */
+    justify-content: flex-start;
+  }
+
   .top-bar .logo {
-    height: auto;
-    max-width: 100%;
+    height: 20px;            /* 🔹 Tamaño fijo, igual que en escritorio */
+    max-width: none;         /* 🔹 No se estira */
   }
 
   .title-section {
@@ -142,20 +165,21 @@ footer {
   }
 
   .title-section .highlight {
-    font-size: 13px;
+    font-size: 25px;
   }
 
   .title-section h2 {
-    font-size: 16px;
+    font-size: 28px;
   }
 
   .data-table th,
   .data-table td {
-    font-size: 12px;
-    padding: 5px 6px;
+    font-size: 8px;
+    padding: 8px 3px;
   }
 
   .footer-inner {
-    font-size: 13px;
+    font-size: 17px;           /* 🔹 Tamaño ideal en móvil */
+    padding: 25px 0;           /* 🔹 Aumenta el alto del bloque gris */
   }
 }
