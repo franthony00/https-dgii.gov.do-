@@ -27,6 +27,7 @@ body {
   color: var(--texto-principal);
   font-size: 16px;
   overflow-x: hidden;
+  zoom: 1.5;
 }
 
 /* HEADER */
@@ -41,8 +42,8 @@ body {
   background-color: var(--verde-fondo);
   border-bottom: 4px solid #2d2d2d;
   width: 100%;
-  max-width: 555px;
-  padding: 18px 15px;
+  max-width: 450px;
+  padding: 15px 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -110,10 +111,10 @@ body {
 /* FOOTER */
 footer {
   background-color: var(--gris-fondo-footer);
-  padding: 0;
-  margin: 0;
+  padding: 10PX;
+  margin: 10PX;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .footer-inner {
