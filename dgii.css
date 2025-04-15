@@ -22,12 +22,15 @@ html {
 }
 
 body {
+  font-size: 14px;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background-color: var(--fondo);
   color: var(--texto-principal);
   font-size: 16px;
   overflow-x: hidden;
-  zoom: 1.5;
+  margin: 0;
+  padding: 0;
+  
 }
 
 /* HEADER */
@@ -78,8 +81,8 @@ body {
 .data-table {
   width: 100%;
   max-width: 555px;
-  padding: 0 15px;
-  margin: 0 auto 20px auto;
+  padding: 0 10px;
+  margin: 20px;
 }
 
 .data-table table {
@@ -119,7 +122,8 @@ footer {
 
 .footer-inner {
   width: 100%;
-  max-width: 555px;
+  max-width: 520px;
+  margin: 0 auto;
   padding: 12px 15px;
   color: #3a3a3a;
   font-size: 14px;
@@ -138,20 +142,20 @@ footer {
   }
 
   .title-section .highlight {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .title-section h2 {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .data-table th,
   .data-table td {
-    font-size: 12.5px;
+    font-size: 12px;
     padding: 5px 6px;
   }
 
-  footer {
+  .footer-inner {
     font-size: 13px;
   }
 }
